@@ -1,0 +1,14 @@
+<nav>
+    <form [formGroup]="groupPokemon">
+      <input type="text" id="search-input" name="search-input" formControlName="nombre">
+    </form>
+</nav>
+
+<mat-card>
+    <mat-card-title style="text-align: center;">{{nombre}}</mat-card-title>
+    <img mat-card-image [src]="imagenUrl" style="width: 350px; height: 250px;">
+    <mat-card-content>
+        {{descripcion}}
+    </mat-card-content>
+</mat-card>
+<button (click)="muestraImagen()">IMAGEN</button>
